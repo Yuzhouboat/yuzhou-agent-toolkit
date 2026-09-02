@@ -1,0 +1,15 @@
+{
+  "name": "yuzhouboat-marketplace",
+  "description": "Yuzhou's Claude Code plugin marketplace.",
+  "owner": {
+    "name": "Yuzhou",
+    "email": "yuzhouboat@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "issue-fixer",
+      "source": "github:Yuzhouboat/issue-fixer",
+      "description": "Fixes GitHub issues end-to-end: investigates, implements a fix, and opens a PR."
+    }
+  ]
+}
