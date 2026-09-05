@@ -13,6 +13,30 @@
         "url": "https://github.com/Yuzhouboat/issue-fixer.git"
       },
       "description": "Fixes GitHub issues end-to-end: investigates, implements a fix, and opens a PR."
+    },
+    {
+      "name": "mailbox-triage",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/Yuzhouboat/Mailbox-Triage.git"
+      },
+      "description": "Triages an email inbox (Exchange or Gmail) with automated classification, filing, and session draft reports."
+    },
+    {
+      "name": "address-pr-comment",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/Yuzhouboat/GithubAgentReview.git"
+      },
+      "description": "Works through a GitHub PR's outstanding review feedback: fetch, fix, reply, resolve."
+    },
+    {
+      "name": "ask-database",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/Yuzhouboat/ask-database-skill.git"
+      },
+      "description": "Answers data questions with read-only SQL, connection profiles, and a private GitHub-backed Markdown table-memory vault."
     }
   ]
 }
