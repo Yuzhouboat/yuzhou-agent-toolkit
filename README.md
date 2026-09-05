@@ -67,7 +67,14 @@ codex plugin add ask-database@yuzhou-agent-toolkit
 GitHub access and an SSH key registered to an authorized account are required for the two private
 repos (`address-pr-comment`, `ask-database`). Start a new Codex session after installation.
 
-Unlike the Claude Code plugins above, these Codex manifests were written by mirroring the schema
-of the existing, working `reporting-agent`/`airflow-agent`/`orim-agent-marketplace` setup — they
-have not been verified with a live `codex plugin install`, since the `codex` CLI isn't available
-in the environment this was built in. Worth a real install test before relying on them.
+Verified with a real `codex plugin marketplace add` + `codex plugin add` for all four plugins
+(`codex-cli` 0.153.4), including the two private repos over SSH — each resolves to its
+`skills/<name>/SKILL.md` correctly.
+
+**There is no project-scope install for Codex plugins.** Unlike Claude Code's `-s user|project`,
+`codex plugin add` has no scope flag, and running it from inside a project directory installs to
+the exact same place as running it anywhere else: `~/.codex/plugins/cache/<marketplace>/<plugin>/<version>`,
+tracked in a flat, global `[plugins."<name>@<marketplace>"]` table in `~/.codex/config.toml`. The
+`[projects."<path>"]` table in that same file only tracks sandbox trust level, not plugins — it's
+unrelated. So for Codex, "installed" always means machine-wide; there's no repo-scoped equivalent
+to commit and share with teammates the way `.claude/settings.json` does for Claude Code.
