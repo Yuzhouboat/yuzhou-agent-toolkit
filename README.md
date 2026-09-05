@@ -9,15 +9,32 @@ This repo also serves as a Claude Code plugin marketplace.
 
 ### Install
 
+Add the marketplace once:
+
 ```
 /plugin marketplace add Yuzhouboat/yuzhou-agent-toolkit
 ```
 
-Then install any listed plugin:
+Then install any listed plugin, at whichever scope fits:
 
 ```
-/plugin install issue-fixer
+/plugin install issue-fixer -s user       # available in every project on this machine
+/plugin install issue-fixer -s project    # scoped to the current repo (writes .claude/settings.json,
+                                           # committable so teammates get it too)
 ```
+
+Scope defaults to `user` if `-s` is omitted. Check what's installed with `/plugin list`, and
+`/plugin details <name>` shows a plugin's skills/agents/commands and estimated token cost before
+you install it.
+
+`address-pr-comment` and `ask-database` live in private repos. Installing them clones over SSH
+using your own git credentials, so they only install for accounts with access to those repos —
+anyone else adding this marketplace will be able to install `issue-fixer` and `mailbox-triage`
+but not those two.
+
+Every plugin here was verified with `claude plugin validate --strict` (manifest correctness) and
+a real `claude plugin install` at both `user` and `project` scope (confirming each resolves to
+exactly the one skill it declares) before being listed.
 
 ### Plugins
 
