@@ -1,0 +1,60 @@
+{
+  "name": "yuzhou-agent-toolkit",
+  "interface": {
+    "displayName": "Yuzhou Agent Toolkit"
+  },
+  "plugins": [
+    {
+      "name": "issue-fixer",
+      "source": {
+        "source": "url",
+        "url": "git@github.com:Yuzhouboat/issue-fixer.git",
+        "ref": "main"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    },
+    {
+      "name": "mailbox-triage",
+      "source": {
+        "source": "url",
+        "url": "git@github.com:Yuzhouboat/Mailbox-Triage.git",
+        "ref": "main"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "address-pr-comment",
+      "source": {
+        "source": "url",
+        "url": "git@github.com:Yuzhouboat/GithubAgentReview.git",
+        "ref": "main"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    },
+    {
+      "name": "ask-database",
+      "source": {
+        "source": "url",
+        "url": "git@github.com:Yuzhouboat/ask-database-skill.git",
+        "ref": "main"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    }
+  ]
+}
