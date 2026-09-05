@@ -1,6 +1,6 @@
 {
-  "name": "yuzhouboat-marketplace",
-  "description": "Yuzhou's Claude Code plugin marketplace.",
+  "name": "yuzhou-agent-toolkit",
+  "description": "Yuzhou's Claude Code plugin marketplace (part of the yuzhou-agent-toolkit repo).",
   "owner": {
     "name": "Yuzhou",
     "email": "yuzhouboat@gmail.com"
