@@ -37,6 +37,14 @@
         "url": "https://github.com/Yuzhouboat/ask-database-skill.git"
       },
       "description": "Answers data questions with read-only SQL, connection profiles, and a private GitHub-backed Markdown table-memory vault."
+    },
+    {
+      "name": "airflow-agent",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/Yuzhouboat/airflow-agent.git"
+      },
+      "description": "Authors production-ready Apache Airflow DAGs, and audits and debugs failed DAG runs with canonical GitHub issues and draft fix PRs."
     }
   ]
 }

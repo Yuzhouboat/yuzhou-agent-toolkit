@@ -27,14 +27,14 @@ Scope defaults to `user` if `-s` is omitted. Check what's installed with `/plugi
 `/plugin details <name>` shows a plugin's skills/agents/commands and estimated token cost before
 you install it.
 
-`address-pr-comment` and `ask-database` live in private repos. Installing them clones over SSH
+`address-pr-comment`, `ask-database`, and `airflow-agent` live in private repos. Installing them clones over SSH
 using your own git credentials, so they only install for accounts with access to those repos —
 anyone else adding this marketplace will be able to install `issue-fixer` and `mailbox-triage`
-but not those two.
+but not those three.
 
 Every plugin here was verified with `claude plugin validate --strict` (manifest correctness) and
 a real `claude plugin install` at both `user` and `project` scope (confirming each resolves to
-exactly the one skill it declares) before being listed.
+the skills it declares) before being listed.
 
 ### Plugins
 
@@ -42,6 +42,7 @@ exactly the one skill it declares) before being listed.
 - **mailbox-triage** — triages an email inbox (Exchange or Gmail) with automated classification, filing, and session draft reports. Source: [Yuzhouboat/Mailbox-Triage](https://github.com/Yuzhouboat/Mailbox-Triage).
 - **address-pr-comment** — works through a GitHub PR's outstanding review feedback: fetch, fix, reply, resolve. Source: [Yuzhouboat/GithubAgentReview](https://github.com/Yuzhouboat/GithubAgentReview) (private).
 - **ask-database** — answers data questions with read-only SQL and a private GitHub-backed Markdown table-memory vault. Source: [Yuzhouboat/ask-database-skill](https://github.com/Yuzhouboat/ask-database-skill) (private).
+- **airflow-agent** — authors production-ready Airflow DAGs (`authoring-dags`), and audits and debugs failed DAG runs into canonical GitHub issues and draft fix PRs (`auditing-dags`, `debugging-dags`). Source: [Yuzhouboat/airflow-agent](https://github.com/Yuzhouboat/airflow-agent) (private).
 
 ### Adding a plugin
 
@@ -62,13 +63,14 @@ codex plugin add issue-fixer@yuzhou-agent-toolkit
 codex plugin add mailbox-triage@yuzhou-agent-toolkit
 codex plugin add address-pr-comment@yuzhou-agent-toolkit
 codex plugin add ask-database@yuzhou-agent-toolkit
+codex plugin add airflow-agent@yuzhou-agent-toolkit
 ```
 
-GitHub access and an SSH key registered to an authorized account are required for the two private
-repos (`address-pr-comment`, `ask-database`). Start a new Codex session after installation.
+GitHub access and an SSH key registered to an authorized account are required for the three private
+repos (`address-pr-comment`, `ask-database`, `airflow-agent`). Start a new Codex session after installation.
 
-Verified with a real `codex plugin marketplace add` + `codex plugin add` for all four plugins
-(`codex-cli` 0.153.4), including the two private repos over SSH — each resolves to its
+Verified with a real `codex plugin marketplace add` + `codex plugin add` for all five plugins
+(`codex-cli` 0.153.4), including the three private repos over SSH — each resolves to its
 `skills/<name>/SKILL.md` correctly.
 
 **There is no project-scope install for Codex plugins.** Unlike Claude Code's `-s user|project`,
