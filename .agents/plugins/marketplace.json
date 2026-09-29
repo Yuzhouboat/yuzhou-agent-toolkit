@@ -21,7 +21,7 @@
       "name": "mailbox-triage",
       "source": {
         "source": "url",
-        "url": "git@github.com:Yuzhouboat/Mailbox-Triage.git",
+        "url": "git@github.com:Yuzhouboat/mailbox-triage.git",
         "ref": "main"
       },
       "policy": {

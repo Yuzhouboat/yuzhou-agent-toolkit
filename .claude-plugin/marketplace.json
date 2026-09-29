@@ -18,7 +18,7 @@
       "name": "mailbox-triage",
       "source": {
         "source": "url",
-        "url": "https://github.com/Yuzhouboat/Mailbox-Triage.git"
+        "url": "https://github.com/Yuzhouboat/mailbox-triage.git"
       },
       "description": "Triages an email inbox (Exchange or Gmail) with automated classification, filing, and session draft reports."
     },
