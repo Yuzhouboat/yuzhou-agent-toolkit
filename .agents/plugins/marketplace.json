@@ -34,7 +34,7 @@
       "name": "address-pr-comment",
       "source": {
         "source": "url",
-        "url": "git@github.com:Yuzhouboat/GithubAgentReview.git",
+        "url": "git@github.com:Yuzhouboat/address-pr-comment.git",
         "ref": "main"
       },
       "policy": {

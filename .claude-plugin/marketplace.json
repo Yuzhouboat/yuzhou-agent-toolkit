@@ -26,7 +26,7 @@
       "name": "address-pr-comment",
       "source": {
         "source": "url",
-        "url": "https://github.com/Yuzhouboat/GithubAgentReview.git"
+        "url": "https://github.com/Yuzhouboat/address-pr-comment.git"
       },
       "description": "Works through a GitHub PR's outstanding review feedback: fetch, fix, reply, resolve."
     },
