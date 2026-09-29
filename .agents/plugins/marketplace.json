@@ -47,7 +47,7 @@
       "name": "ask-database",
       "source": {
         "source": "url",
-        "url": "git@github.com:Yuzhouboat/ask-database-skill.git",
+        "url": "git@github.com:Yuzhouboat/ask-database.git",
         "ref": "main"
       },
       "policy": {

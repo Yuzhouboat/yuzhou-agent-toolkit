@@ -34,7 +34,7 @@
       "name": "ask-database",
       "source": {
         "source": "url",
-        "url": "https://github.com/Yuzhouboat/ask-database-skill.git"
+        "url": "https://github.com/Yuzhouboat/ask-database.git"
       },
       "description": "Answers data questions with read-only SQL, connection profiles, and a private GitHub-backed Markdown table-memory vault."
     },
