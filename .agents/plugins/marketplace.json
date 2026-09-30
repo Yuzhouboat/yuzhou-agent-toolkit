@@ -44,19 +44,6 @@
       "category": "Developer Tools"
     },
     {
-      "name": "ask-database",
-      "source": {
-        "source": "url",
-        "url": "git@github.com:Yuzhouboat/ask-database.git",
-        "ref": "main"
-      },
-      "policy": {
-        "installation": "AVAILABLE",
-        "authentication": "ON_INSTALL"
-      },
-      "category": "Developer Tools"
-    },
-    {
       "name": "airflow-agent",
       "source": {
         "source": "url",
