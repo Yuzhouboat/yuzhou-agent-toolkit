@@ -27,10 +27,10 @@ Scope defaults to `user` if `-s` is omitted. Check what's installed with `/plugi
 `/plugin details <name>` shows a plugin's skills/agents/commands and estimated token cost before
 you install it.
 
-`address-pr-comment` and `airflow-agent` live in private repos. Installing them clones over SSH
+`address-pr-comment`, `ask-database`, and `airflow-agent` live in private repos. Installing them clones over SSH
 using your own git credentials, so they only install for accounts with access to those repos —
 anyone else adding this marketplace will be able to install `issue-fixer` and `mailbox-triage`
-but not those two.
+but not those three.
 
 Every plugin here was verified with `claude plugin validate --strict` (manifest correctness) and
 a real `claude plugin install` at both `user` and `project` scope (confirming each resolves to
@@ -41,9 +41,8 @@ the skills it declares) before being listed.
 - **issue-fixer** — fixes GitHub issues end-to-end: investigates, implements a fix, and opens a PR. Source: [Yuzhouboat/issue-fixer](https://github.com/Yuzhouboat/issue-fixer).
 - **mailbox-triage** — triages an email inbox (Exchange or Gmail) with automated classification, filing, and session draft reports. Source: [Yuzhouboat/mailbox-triage](https://github.com/Yuzhouboat/mailbox-triage).
 - **address-pr-comment** — works through a GitHub PR's outstanding review feedback: fetch, fix, reply, resolve. Source: [Yuzhouboat/address-pr-comment](https://github.com/Yuzhouboat/address-pr-comment) (private).
+- **ask-database** — connects Claude Code to the remote Ask Database MCP server (`https://askdb.yliumono.click/mcp`): read-only SQL over MySQL and Redshift through their official MCP servers, plus a shared server-side table wiki that records user statements. Needs `ASK_DATABASE_TOKEN` set in your environment (ask the server owner). Claude Code only. Source: [Yuzhouboat/ask-database](https://github.com/Yuzhouboat/ask-database) (private).
 - **airflow-agent** — authors production-ready Airflow DAGs (`authoring-dags`), and audits and debugs failed DAG runs into canonical GitHub issues and draft fix PRs (`auditing-dags`, `debugging-dags`). Source: [Yuzhouboat/airflow-agent](https://github.com/Yuzhouboat/airflow-agent) (private).
-
-`ask-database` is temporarily unlisted while it's reworked.
 
 ### Adding a plugin
 
@@ -51,7 +50,7 @@ Add an entry to `.claude-plugin/marketplace.json`'s `plugins` array, pointing `s
 
 ## Codex plugin marketplace
 
-The same plugins are also catalogued for Codex in `.agents/plugins/marketplace.json`, following
+The same plugins, except `ask-database` (Claude Code only), are also catalogued for Codex in `.agents/plugins/marketplace.json`, following
 the same convention as [orim-agent-marketplace](https://github.com/Yuzhouboat/orim-agent-marketplace).
 Each plugin repo carries its own `.codex-plugin/plugin.json` manifest alongside its
 `.claude-plugin/plugin.json` one, so the same source repos serve both agents.

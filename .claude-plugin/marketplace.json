@@ -31,6 +31,14 @@
       "description": "Works through a GitHub PR's outstanding review feedback: fetch, fix, reply, resolve."
     },
     {
+      "name": "ask-database",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/Yuzhouboat/ask-database.git"
+      },
+      "description": "Connects to the remote Ask Database MCP server: read-only SQL over MySQL and Redshift plus a shared, server-side table wiki that learns from user statements."
+    },
+    {
       "name": "airflow-agent",
       "source": {
         "source": "url",
